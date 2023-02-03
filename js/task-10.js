@@ -20,6 +20,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   outputEl.innerHTML = "";
+  quantityEl.value = "";
 }
 
 function getRandomHexColor() {
