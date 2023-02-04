@@ -14,34 +14,10 @@ const images = [
 ];
 
 const listOfGallaryEl = document.querySelector(".gallery");
-const list = images.map(({ url, alt }) => {
-  return listOfGallaryEl.insertAdjacentHTML(
-    "beforeend",
-    `<li class="gallery__item"><img src="${url}" alt="${alt}" width="300"></li>`
-  );
-});
-
-console.log(listOfGallaryEl);
-
-// Приклад дз № 2
-// const ingredients = [
-//   "Potatoes",
-//   "Mushrooms",
-//   "Garlic",
-//   "Tomatos",
-//   "Herbs",
-//   "Condiments",
-// ];
-
-// const listOfIngredientsEl = document.querySelector("#ingredients");
-
-// const makeListOfIngredients = (ingredient) => {
-//   return ingredient.map((ingredient) => {
-//     const itemOfIngredientsEl = document.createElement("li");
-//     itemOfIngredientsEl.textContent = ingredient;
-//     itemOfIngredientsEl.classList.add("item");
-//     return itemOfIngredientsEl;
-//   });
-// };
-
-// listOfIngredientsEl.append(...makeListOfIngredients(ingredients));
+const markup = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="gallery__item"><img src="${url}" alt="${alt}" width="300"></li>`
+  )
+  .join("");
+listOfGallaryEl.insertAdjacentHTML("afterend", markup);

@@ -16,6 +16,7 @@ function createBoxes(amount) {
     boxesArr.push(boxEl);
   }
   outputEl.append(...boxesArr);
+  quantityEl.value = "";
 }
 
 function destroyBoxes() {
